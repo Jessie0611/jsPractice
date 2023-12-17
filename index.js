@@ -71,7 +71,7 @@ pi2 = Math.sqrt(pi2);
 //max and min / maximum = Math.max(x,y,z);
 console.log(pi2);
 
-
+/*
 let a;
 let b;
 let c;
@@ -80,4 +80,46 @@ a = Number(a);
 b = window.prompt("Enter side B");
 b = Number(b);
 c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
-console.log("Side C:", c)
+console.log("Side C:", c) */
+
+document.getElementById("submitButton").onclick = function(){
+    a = document.getElementById("aTextBox").value;
+    a = Number (a);
+
+    b = document.getElementById("bTextBox").value;
+    b = Number (b);
+    
+    c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+
+    document.getElementById("cLabel").innerHTML = "Side C: " + c;
+}
+
+//COUNTER
+let count = 0
+
+document.getElementById("decreaseBtn").onclick = function(){
+    count -=1;
+    document.getElementById("countLabel").innerHTML = count;
+}
+document.getElementById("resetBtn").onclick = function(){
+    count =0;
+    document.getElementById("countLabel").innerHTML = count;
+}
+document.getElementById("increaseBtn").onclick = function(){
+    count +=1;
+    document.getElementById("countLabel").innerHTML = count;
+}
+//RANDOM NUM
+let a;
+let b;
+let c;
+
+document.getElementById("rollDice").onclick = function(){
+    let a = Math.floor(Math.random()* 8) +1;
+    let b = Math.floor(Math.random()* 10) +1;
+    let c = Math.floor(Math.random()* 20) +1;
+
+    document.getElementById("aDiceLabel").innerHTML = "8 Sided Dice: " +a;
+    document.getElementById("bDiceLabel").innerHTML = "10 Sided Dice: " +b;
+    document.getElementById("cDiceLabel").innerHTML = "20 Sided Dice: " +c;
+}
