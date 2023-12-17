@@ -4,7 +4,7 @@ Variables are containers, behaves as if it was the value that it contains
 declaration is "let" or "const" 
 then assignment (= assignment operator)
 */
- let firstName = "Jessie"; //strings
+let firstName = "Jessie"; //strings
 let lastName = "Battles";
 let age = 31; //numbers
 age += 1;
@@ -110,16 +110,16 @@ document.getElementById("increaseBtn").onclick = function(){
     document.getElementById("countLabel").innerHTML = count;
 }
 //RANDOM NUM
-let a;
-let b;
-let c;
+let d;
+let e;
+let f;
 
 document.getElementById("rollDice").onclick = function(){
-    let a = Math.floor(Math.random()* 8) +1;
-    let b = Math.floor(Math.random()* 10) +1;
-    let c = Math.floor(Math.random()* 20) +1;
+    let d = Math.floor(Math.random()* 8) +1;
+    let e = Math.floor(Math.random()* 10) +1;
+    let f = Math.floor(Math.random()* 20) +1;
 
-    document.getElementById("aDiceLabel").innerHTML = "8 Sided Dice: " +a;
-    document.getElementById("bDiceLabel").innerHTML = "10 Sided Dice: " +b;
-    document.getElementById("cDiceLabel").innerHTML = "20 Sided Dice: " +c;
+    document.getElementById("dDiceLabel").innerHTML = "8 Sided Dice: " +a;
+    document.getElementById("eDiceLabel").innerHTML = "10 Sided Dice: " +b;
+    document.getElementById("fDiceLabel").innerHTML = "20 Sided Dice: " +c;
 }
