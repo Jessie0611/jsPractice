@@ -1,9 +1,8 @@
 console.log("I like pizza.");
-/* <= multi line comment
+/*<= multi line comment
 Variables are containers, behaves as if it was the value that it contains
 declaration is "let" or "const" 
-then assignment (= assignment operator)
-*/
+then assignment (= assignment operator)*/
 let firstName = "Jessie"; //strings
 let lastName = "Battles";
 let age = 31; //numbers
@@ -14,14 +13,11 @@ console.log("Age", age);
 console.log("Student Enrolled:", student);
 document.getElementById("p1").innerHTML = "Hello, I am "+ firstName;
 /* window.alert("I really love pizza!");
-
 arithmetic expression is a combo of operands and operators that can be evaluated to a value
 like y = x + 5 
-
 Accept user input with prompt
 let user = window.prompt("Name?")
-console.log(user);
-*/
+console.log(user);*/
 
 //HTML textbox
 let username;
@@ -71,8 +67,7 @@ pi2 = Math.sqrt(pi2);
 //max and min / maximum = Math.max(x,y,z);
 console.log(pi2);
 
-/*
-let a;
+/* let a;
 let b;
 let c;
 a = window.prompt("Enter side A");
@@ -110,16 +105,15 @@ document.getElementById("increaseBtn").onclick = function(){
     document.getElementById("countLabel").innerHTML = count;
 }
 //RANDOM NUM
-let d;
-let e;
-let f;
 
 document.getElementById("rollDice").onclick = function(){
+
     let d = Math.floor(Math.random()* 8) +1;
     let e = Math.floor(Math.random()* 10) +1;
     let f = Math.floor(Math.random()* 20) +1;
 
-    document.getElementById("dDiceLabel").innerHTML = "8 Sided Dice: " +a;
-    document.getElementById("eDiceLabel").innerHTML = "10 Sided Dice: " +b;
-    document.getElementById("fDiceLabel").innerHTML = "20 Sided Dice: " +c;
+    document.getElementById("dDiceLabel").innerHTML = " 8 Sided Dice: " +d;
+    document.getElementById("eDiceLabel").innerHTML = "10 Sided Dice: " +e;
+    document.getElementById("fDiceLabel").innerHTML = "20 Sided Dice: " +f;
 }
+
