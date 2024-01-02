@@ -28,7 +28,7 @@ document.getElementById("myButton").onclick = function (){
     document.getElementById("myLabel").innerHTML = "Hello " + username;
 }
 
-//Type conversion = change datatype of a value to another
+//TYPE CONVERSION = change datatype of a value to another
 let birthdayAge = window.prompt("How old are you?");
 console.log(typeof birthdayAge);
 birthdayAge = Number(birthdayAge);
@@ -46,7 +46,7 @@ console.log(x, typeof x);
 console.log(y, typeof y);
 console.log(z, typeof z);
 
-//const - variable that cant be changed
+//CONST - variable that cant be changed
 const pi = 3.14159;
 let radius;
 let circumference;
@@ -83,13 +83,13 @@ document.getElementById("submitButton").onclick = function(){
 
     b = document.getElementById("bTextBox").value;
     b = Number (b);
-    
+    //HYPOTENUSE CALC
     c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
 
     document.getElementById("cLabel").innerHTML = "Side C: " + c;
 }
 
-//COUNTER
+//COUNTER PROGRAM
 let count = 0
 
 document.getElementById("decreaseBtn").onclick = function(){
@@ -104,7 +104,7 @@ document.getElementById("increaseBtn").onclick = function(){
     count +=1;
     document.getElementById("countLabel").innerHTML = count;
 }
-//RANDOM NUM
+//RANDOM NUMBER GENERATOR
 
 document.getElementById("rollDice").onclick = function(){
 
@@ -117,3 +117,113 @@ document.getElementById("rollDice").onclick = function(){
     document.getElementById("fDiceLabel").innerHTML = "20 Sided Dice: " +f;
 }
 
+
+//USEFUL STRING METHODS -always starts w/0 so charAT displays what character is at the index in ()
+let userName = "Jessie Battles";
+let phoneNumber = "123/123/1234"
+console.log(userName);
+console.log(userName.length);
+console.log(userName.charAt(4));
+console.log(userName.indexOf("B"));
+console.log(userName.lastIndexOf("t"));
+//userName = userName.trim();
+//userName = userName.toUpperCase();
+phoneNumber = phoneNumber.replaceAll("/","-");
+console.log(phoneNumber);
+
+/*SLICE METHOD extracts a section of a string and returns it as a new string
+without modifying the original string*/
+let fullName = "Example Name";
+let beginningName;
+let endName;
+beginningName = fullName.slice(0,fullName.indexOf(" "));
+endName = fullName.slice(fullName.indexOf(" ")+ 1);
+console.log(beginningName);
+console.log(endName);
+
+//METHOD CHAINING -calling one method after another in one contiuous line of code
+let Username = "jess0611";
+//instead of letter = letter.toUpperCase(); console.log(letter); use--
+let letter = Username.charAt(0).toUpperCase().trim();
+//Just add other things to the same line.
+
+//IF STATMENTS -basic form of decision making if a condition is true, then do something, else do not.
+let drinkingAge = 21;
+if(drinkingAge >=21){
+    console.log("You can drink at the bar.");
+}
+else if(age >=65){
+    console.log("You are a senior citizen!")
+}
+else{
+    console.log("You cannot drink at the bar.")
+}
+//
+let online = true;
+if(online){
+    console.log("User Online!")
+}
+else{
+    console.log("User Offline!")
+}
+
+//CHECKED PROPERTY 
+document.getElementById("checkButton").onclick = function(){
+    const myCheckBox = document.getElementById("myCheckBox");
+    const VisaBtn = document.getElementById("visa");
+    const MastercardBtn = document.getElementById("mastercard");
+    const PayPalBtn = document.getElementById("paypal");
+
+    if(myCheckBox.checked){
+    console.log("You are subscribed!");
+}
+    else{
+    console.log("You are not subscribed!");
+}
+if(VisaBtn.checked){
+    console.log("Visa Selected.");
+}
+else if(MastercardBtn.checked){
+    console.log("Mastercard Selected.");
+}
+else if(PayPalBtn.checked){
+    console.log("PayPal Selected.");
+}
+else{
+    console.log("No payment selected.")
+}
+}
+//SWITCH STATMENTS examine a value for a match against many case clauses, more efficient that many 'else if'
+
+let grade = "A";
+switch(grade){
+    case "A":
+        console.log("You got an A!");
+        break;
+    case "B":
+        console.log("You got a B!");
+        break;
+    case "C":
+        console.log("You got a C.");
+        break;
+    case "F":
+        console.log("You got an F.");
+        break;
+}
+// -- OR --//
+let examGrade = 97;
+
+switch(true){
+    case examGrade >= 90:
+        console.log("You did great!");
+        break;
+    case examGrade >=80:
+        console.log("You did good!");
+        break;
+    case examGrade >=70:
+        console.log("You did okay!");
+        break;
+    case examGrade >60:
+        console.log("You failed!")
+        break;
+}
