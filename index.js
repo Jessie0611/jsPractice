@@ -210,7 +210,7 @@ switch(grade){
         console.log("You got an F.");
         break;
 }
-// -- OR --//
+// -- DIFF SWITCH EXAMPLE --//
 let examGrade = 97;
 
 switch(true){
@@ -226,4 +226,30 @@ switch(true){
     case examGrade >60:
         console.log("You failed!")
         break;
+}
+
+//&&|| ability to check more than 1 condition concurrently &&-Both true ||OR Either condition can be true
+let temp = 20;
+//let sunny = true;
+//if(temp > 0 && temp < 30 && sunny){
+if(temp > 0 && temp < 30){
+    console.log("Good weather!")
+}
+else{
+    console.log("Bad weather!")
+}
+
+if(temp <= 0 || temp >= 30){
+    console.log("Bad weather!")
+}
+else{
+    console.log("Good weather!")
+}
+//NOT ! reverse boolean value
+let temp = 15;
+if(temp > 0){
+    console.log("It's warm outside.")
+}
+else{
+    console.log("It's cold outside.")
 }
