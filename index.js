@@ -339,3 +339,16 @@ function getArea(width, height){
     return width * height;
 }
 
+//template literals - delimitedd with (')
+
+let tempName = "Jess";
+let items = 3;
+let total = 75;
+//console.log(`Hello ${tempName}`);
+//console.log(`You have ${items} in your cart.`)
+//console.log(`Your total is $${total}.`)
+let text = `Hello ${tempName} 
+You have ${items} items in your cart.
+Your total is $${total}.`
+
+console.log(text);
