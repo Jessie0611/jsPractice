@@ -1,7 +1,8 @@
 console.log("I like pizza.");
-/*<= multi line comment
-Variables are containers, behaves as if it was the value that it contains
-declaration is "let" or "const" 
+/*Variables are containers, behaves as if it was the value that it contains
+let - variables are limited to block scope {}
+var - variales are limited to a function(){}
+global variables are declared outside any function and var will change browers window properties
 then assignment (= assignment operator)*/
 let firstName = "Jessie"; //strings
 let lastName = "Battles";
@@ -167,6 +168,16 @@ else{
     console.log("User Offline!")
 }
 
+//TERNARY OP - shortcut for an if/else statment with 3 operands
+//1. a condition with ? 2. expression if True 3. expression if False
+// condition ? exprIfTrue : exprIfFalse
+let adult = checkAge(21);
+console.log(adult);
+function checkAge(age){
+    return age >= 21? true : false;
+}
+
+
 //CHECKED PROPERTY 
 document.getElementById("checkButton").onclick = function(){
     const myCheckBox = document.getElementById("myCheckBox");
@@ -229,7 +240,7 @@ switch(true){
 }
 
 //&&|| ability to check more than 1 condition concurrently &&-Both true ||OR Either condition can be true
-let temp = 20;
+let temp = 15;
 //let sunny = true;
 //if(temp > 0 && temp < 30 && sunny){
 if(temp > 0 && temp < 30){
@@ -245,11 +256,86 @@ if(temp <= 0 || temp >= 30){
 else{
     console.log("Good weather!")
 }
-//NOT ! reverse boolean value
-let temp = 15;
-if(temp > 0){
-    console.log("It's warm outside.")
+//NOT ! typically used to reverse boolean value
+let sunny = true;
+
+if(!(temp > 0)){
+    console.log("It's cold outside");
 }
 else{
-    console.log("It's cold outside.")
+    console.log("It's warm outside.");
 }
+if(!sunny){
+    console.log("It's cloudy");
+}
+else{
+    console.log("Its sunny");
+}
+//while loop - repeats some code while some condition is true, potentially infinite 
+let playerName = "";
+
+while(playerName == "" || playerName == null){
+  playerName = window.prompt ("Enter Player Name");
+}
+
+console.log("Hello Player", playerName)
+/*"DO WHILE" loop - do something, check condition, repeat if condition is true
+let playerName;
+do{
+    playerName = window.prompt ("Enter Player Name");
+}
+while(playerName == "")
+console.log("Hello Player", playerName)*/
+
+//FOR LOOP - repeat some code a certain amount of times
+//for(let counter = 1; counter <= 5; counter +=1){ 
+//       console.log(counter);
+//}
+for (let hny = 5; hny > 0; hny-=1){ //u can count down by 2: hny -=2, -=3,-=4.. etc.
+console.log(hny);
+}
+console.log("Happy New Year!");
+
+/*break can break out of loop entirely: 
+for(let i = 1; i <=20; i +=1){ 
+    if (i == 13){
+        break;  ("continue" will skip the number 13 and finish the list)
+    }
+    console.log(i);
+}*/
+//Nested Loop
+//for(let n = 1; n <= 3; n+=1){
+//    for(let m = 1; m <=3; m+=1)}
+
+//FUNCTIONS = define code once, use it many times.
+startProgram();
+
+function startProgram(){
+    let birthdayPartyFor = "Jessie";
+    let newAge = 32;
+
+    happyBirthdayParty(birthdayPartyFor,newAge); //PERAMETERS
+}
+
+function happyBirthdayParty(birthdayPartyFor,newAge){
+    console.log("Happy Birthday to you!");
+    console.log("Happy Birthday to you!");
+    console.log("Happy Birthday dear", birthdayPartyFor);
+    console.log("You are" , newAge , "years old!") 
+}
+//RETURNS - returns a value back to the place wherre you invoked a function
+let area;
+let width;
+let height;
+
+width = window.prompt("Enter width");
+height = window.prompt("Enter height");
+
+area = getArea(width, height);
+
+console.log("The area is: ", area);
+
+function getArea(width, height){
+    return width * height;
+}
+
