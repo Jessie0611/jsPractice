@@ -352,3 +352,16 @@ You have ${items} items in your cart.
 Your total is $${total}.`
 
 console.log(text);
+
+/*.toLocalString() = returns a string with a language
+number.toLocaleString(locale, {options});
+locale - specify language / options -object with formatting options */
+let myNum = 123456.789;
+myNum = myNum.toLocaleString("en-US", currency: "USD");
+console.log(myNum);
+//myNum = myNum.toLocaleString("en-US");
+//("en-US", currency: "USD"); US Englsih
+//("hi-IN", currency: "INR"); Hindi
+//("de-DE", currency: "EUR"); Standard German
+//myNum = myNum.toLocaleString(undefined, {style: percent};
+//myNum = myNum.toLocaleString(undefined, {style: "unit", unit: "celsius"});
