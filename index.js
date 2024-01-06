@@ -357,7 +357,7 @@ console.log(text);
 number.toLocaleString(locale, {options});
 locale - specify language / options -object with formatting options */
 let myNum = 123456.789;
-myNum = myNum.toLocaleString("en-US", currency: "USD");
+myNum = myNum.toLocaleString("en-US", {currency: "USD"});
 console.log(myNum);
 //myNum = myNum.toLocaleString("en-US");
 //("en-US", currency: "USD"); US Englsih
@@ -365,3 +365,20 @@ console.log(myNum);
 //("de-DE", currency: "EUR"); Standard German
 //myNum = myNum.toLocaleString(undefined, {style: percent};
 //myNum = myNum.toLocaleString(undefined, {style: "unit", unit: "celsius"});
+
+
+const answer = Math.floor(Math.random()* 10 + 1)
+let guesses = 0;
+document.getElementById("guessSubmit").onclick = function(){
+    let guess = document.getElementById("guessField").value
+    guesses+=1;
+    if(guess == answer){
+       alert(`${answer} is the the number. It took you ${guesses} guesses.`);
+     }
+     else if(guess < answer){
+        alert("Too small!");
+     }
+     else{
+        alert("Too large!");
+     }
+}
